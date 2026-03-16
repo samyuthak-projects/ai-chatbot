@@ -1,7 +1,31 @@
 responses = {
-    "hello": "Hi there!",
-    "hi": "Hello!",
-    "how are you": "I'm just a bot, but I'm doing great!",
-    "what is your name": "I'm Samyutha's chatbot.",
-    "bye": "Goodbye! Have a nice day!"
+    "hello": [
+        "Hi there!",
+        "Hello!",
+        "Hey!"
+    ],
+    
+    "hi": [
+        "Hello!",
+        "Hi!",
+        "Hey there!"
+    ],
+    
+    "how are you": [
+        "I'm doing great!",
+        "All good here!",
+        "I'm just code, but I'm doing fine!"
+    ],
+    
+    "name": [
+        "I'm Samyutha's chatbot.",
+        "You can call me SamBot!",
+        "I'm a simple Python chatbot."
+    ],
+    
+    "bye": [
+        "Goodbye!",
+        "See you later!",
+        "Have a great day!"
+    ]
 }

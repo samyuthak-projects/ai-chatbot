@@ -1,14 +1,24 @@
+import random
 from responses import responses
 
 print("Chatbot started! Type 'quit' to exit.")
 
 while True:
+
     user_input = input("You: ").lower()
 
     if user_input == "quit":
         print("Bot: Goodbye!")
         break
 
-    reply = responses.get(user_input, "Sorry, I don't understand that.")
+    response_found = False
 
-    print("Bot:", reply)
+    for keyword in responses:
+        if keyword in user_input:
+            reply = random.choice(responses[keyword])
+            print("Bot:", reply)
+            response_found = True
+            break
+
+    if not response_found:
+        print("Bot: Sorry, I don't understand that.")
