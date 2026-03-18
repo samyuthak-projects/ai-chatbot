@@ -1,8 +1,7 @@
-import random
-from responses import intents
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
+# training data
 texts = [
     "hello", "hi", "hey", "good morning",
     "how are you", "how are you doing",
@@ -23,19 +22,4 @@ X = vectorizer.fit_transform(texts)
 model = MultinomialNB()
 model.fit(X, labels)
 
-print("AI Chatbot started! Type 'quit' to exit.")
-
-while True:
-
-    user_input = input("You: ")
-
-    if user_input.lower() == "quit":
-        print("Bot: Goodbye!")
-        break
-
-    X_test = vectorizer.transform([user_input])
-    predicted_intent = model.predict(X_test)[0]
-
-    response = random.choice(intents[predicted_intent]["responses"])
-
-    print("Bot:", response)
+print("Model trained successfully!")
